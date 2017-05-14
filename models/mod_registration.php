@@ -9,32 +9,44 @@ if (isset($data[submit])) {
     $errors = array();
     
     if(trim($data['login']) == ''){
-        $errors[] = 'Введіть логін';
+        $errors[] = 'Введіть логін!';
     }
     
      if(trim($data['email']) == ''){
-        $errors[] = 'Введіть email';
+        $errors[] = 'Введіть email!';
     }
     
      if($data['password'] == ''){
-        $errors[] = 'Введіть пароль';
+        $errors[] = 'Введіть пароль!';
     }
     
     if($data['password_2'] != $data['password']){
-        $errors[] = 'Повторний пароль введений невірно';
+        $errors[] = 'Повторний пароль введено невірно!';
+    }
+    
+    if( R::count('users', 'login = ?', array($data['login'])) > 0){
+        $errors[] = 'Користувач з таким логіном вже існує!';
+    }
+    
+    if( R::count('users', 'email = ?', array($data['email'])) > 0){
+        $errors[] = 'Користувач з таким email вже існує!';
     }
     
     //Все добре реєструємо
     
     if(empty($errors)){
-        echo 'Реєстраця';
+        $user = R::dispense('users');
+        $user->login = $data['login'];
+        $user->email = $data['email'];
+        $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
+        R::store($user);
+        
+        $good = 'Ви успішно зареєструвалися!';
+        
     }
     // Виводимо ошибку
     else {
         $error = array_shift($errors);
     }
 }
- else {
-    echo 'Ошибка 2';
-    echo $data[submit];
-}
+ 
