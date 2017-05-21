@@ -5,12 +5,6 @@ require_once 'models/mod_login.php';
 ?>
 
 <form class="login" method="post" action="">
-    <?php if ($good) { ?> 
-        <p style="color: green">
-            <?= $good ?>
-        </p>
-    <?php } else { ?>
-
         <label for="login">Логін</label>
         <input type="text" id="login" name="login" 
                value="<?=$data['login'] ?>"/>
@@ -26,8 +20,6 @@ require_once 'models/mod_login.php';
         <?php } ?>
 
         <input type="submit" value="Вхід" name="submit"/>
-
-    <?php } ?>
 </form>
 
 <?=include 'examples/footer.php'; ?>

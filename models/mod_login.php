@@ -18,8 +18,8 @@ if (isset($data[submit])) {
         //Логін існує
         if (password_verify($data['password'], $user->password)) {
             $_SESSION['logged_user'] = $user;
-            $_SESSION['login'] = $_SESSION['logged_user']->login;
-            $good = 'Ви успішно ввійшли!';
+            $_SESSION['login'] = $_SESSION['logged_user']->login; 
+            echo "<script>window.location.href='/'</script>";
         } else {
             $errors[] = 'Пароль введено не вірно!';
         }

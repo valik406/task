@@ -6,14 +6,14 @@
 			<ul class="menu hidden">
                             <?php if(isset($_SESSION['logged_user'])){ ?>
                             <p style="color: white; text-align: center;">Привіт, <?php echo $_SESSION['login'];?>!</p>
-                                <li><a href="index.php?page=out">Вихід</a></li>
-                                <li><a href="index.php?page=user">
-                                        Список здач</a></li>
+                                <a href="index.php?page=out"><li>Вихід</li></a>
+                                <a href="index.php?page=user"><li>
+                                        Список здач</li></a>
                                 
                             <?php } else { ?>
-				<li><a href="index.php?page=login">Вхід</a></li>
-				<li><a href="index.php?page=registration">
-                                        Реєстрація</a></li>
+				<a href="index.php?page=login"><li>Вхід</li></a>
+				<a href="index.php?page=registration"><li>
+                                        Реєстрація</li></a>
                             <?php } ?>
 			</ul>
 		</div>
