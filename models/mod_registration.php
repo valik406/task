@@ -1,5 +1,6 @@
 <?php
 require 'models/mod_connectionSQL.php';
+require 'models/mod_class_verification.php';
 
 $data = $_POST;
 
@@ -8,16 +9,24 @@ $data = $_POST;
 if (isset($data[submit])) {
     $errors = array();
     
-    if(trim($data['login']) == ''){
-        $errors[] = 'Введіть логін!';
-    }
+    $verification = new Verification;
+    $verification->login = $data['login'];
+    $verification->password = $data['password'];
     
-     if(trim($data['email']) == ''){
+    if($verification->login()){
+    foreach ($verification->login() as $value) {
+       $errors[] = $value; 
+    }
+    }
+
+    if(trim($data['email']) == ''){
         $errors[] = 'Введіть email!';
     }
     
-     if($data['password'] == ''){
-        $errors[] = 'Введіть пароль!';
+    if($verification->password()){
+    foreach ($verification->password() as $value) {
+       $errors[] = $value; 
+    }
     }
     
     if($data['password_2'] != $data['password']){
@@ -31,7 +40,6 @@ if (isset($data[submit])) {
     if( R::count('users', 'email = ?', array($data['email'])) > 0){
         $errors[] = 'Користувач з таким email вже існує!';
     }
-    
     //Все добре реєструємо
     
     if(empty($errors)){
@@ -42,11 +50,10 @@ if (isset($data[submit])) {
         R::store($user);
         
         $good = 'Ви успішно зареєструвалися!';
-        
+
     }
     // Виводимо ошибку
     else {
         $error = array_shift($errors);
     }
 }
- 

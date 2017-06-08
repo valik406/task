@@ -8,7 +8,10 @@ if (!isset($page)) {
     $title = 'Вхід';
 } elseif ($page == 'registration') {
     $title = 'Реєстрація';
-} else {
+} elseif ($page == 'about') {
+    $title = 'Про використання';
+}
+else {
     $title = 'Ошибка 404';
 }
 

@@ -1,220 +1,498 @@
 body{
-	background:
-linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-background-color:#708090;
-background-size: 64px 128px;
-	margin: 0px;
-	font-family: Arial, sans-serif;
+    background:
+        linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+        linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
+    margin: 0px;
+    font-family: Arial, sans-serif;
 }
 header{
-	background: #34495e;
-	padding: 10px;
-	color: white;
-	border-radius: 5px;
-	min-width: 450px;
-	font-size: 18px;
+    background: #34495e;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    min-width: 450px;
+    font-size: 18px;
 
 }
 header::after {
-	display: table;
-	content: "";
-	clear: both;
+    display: table;
+    content: "";
+    clear: both;
 }
 
 h1{
-	padding: 5px;
-	margin: 10px;
-	margin-top: 30px;
-	float: left;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 10px;
+    float: left;
+    vertical-align: middle;
 }
 
 h1 a{
-    	color:white;
-	text-decoration: none;
+    color:white;
+    text-decoration: none;
 }
 
 .staticHeader{
-	margin: 0 auto;
-
-	min-width:450px;
-width: 50%
+    margin: 0 auto;
+    min-width:450px;
+    width: 75%
 }
 .layout-column {
-	float: right;
-	width: 200px;
+    float: right;
+    width: 200px;
 }
 .layout-column a{
-	color:white;
-	text-decoration: none;
+    color:white;
+    text-decoration: none;
 }
 .menu {
-	margin: 0;
-	padding: 10px;
-	list-style: none;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
 }
 
 .menu li {
-	margin-bottom: 5px;
-	padding: 5px;
-	text-align: center;
-	background: #2c3e50;
-	border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+    background: #2c3e50;
+    border-radius: 5px;
 }
 
 .menu li:hover {
-	background: #708090;
+    background: #708090;
 }
 
 
 .hidden {
-	display: block;
+    display: block;
 }
 
 
 .main{
-	margin: 10px auto;
-	padding: 0px 10px;
-	background: rgba(255,255,255, 0.5);
-	border-radius: 5px;
-	min-width: 450px;
-	min-height: 450px;
-	width: 50%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: rgba(255,255,255, 0.7);
+    border-radius: 5px;
+    min-width: 450px;
+    width: 75%; 
 }
 
+.about{
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: rgba(255,255,255, 0.9);
+    border-radius: 5px;
+    min-width: 450px;
+    width: 75%;
+    color: #34495e;
+    font-size: 20px;
+}
+.about div{
+       padding: 0px 50px; 
+}
+.about .img{
+    text-align: center;
+}
+.about img{
+    width: 70%; 
+    border-radius: 5px;
+}
 .newTask{
-	margin: 0 auto;
-	padding: 10px;
-	padding-bottom: 0px;
-	list-style: none;
-	max-width: 400px;
-	min-width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 0px;
+    list-style: none;
+    max-width: 300px;
+    min-width: 200px;
 
 }
 
 .newTask p{
-	margin:5px 0;
-	padding: 5px;
-	text-align: center;
-	background: #2c3e50;
-	border-radius: 5px;
-	font-size: 25px;
+    margin:5px 0;
+    padding: 5px;
+    text-align: center;
+    background: #2c3e50;
+    border-radius: 5px;
+    font-size: 20px;
 
 
 }
 
 .newTask a{
-	color:white;
-	text-decoration: none;
+    color:white;
+    text-decoration: none;
+    font-weight:400;
+    text-shadow: 1px 1px 1px grey;
 
 }
 .newTask p:hover {
-	background: #708090;
+    background: #708090;
 }
 
 .listTask h2{
-	color: #34495e;
-	margin: 5px 0;
-	padding-left: 10px;
-	text-align: center;
+    color: #34495e;
+    margin: 5px 0;
+    padding-left: 10px;
+    text-align: center;
 }
 
 .listTask{
-	margin: 0 auto;
-	padding: 10px;
-	padding-bottom: 20px;
-	list-style: none;
-	max-width: 500px;
-	min-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    list-style: none;
+    max-width: 500px;
+    min-width: 300px;
 
 }
 
 .listTask p{
-color: #34495e;
-font-size: 20px;
-font-weight: 600;
+    color: #34495e;
+    font-size: 20px;
+    font-weight: 600;
 }
 footer {
-	padding-top: 5px;
-	height: 50px;
-	color: white;
-	background: #34495e;
-	text-align: center;
-	border-radius: 5px;
-	min-width: 450px;
+    padding-top: 5px;
+    height: 50px;
+    color: white;
+    background: #34495e;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 450px;
 }
 footer p{
-	margin: 5px;
-	font-size: 20px;
+    margin: 5px;
+    font-size: 20px;
 }
+
 
 
 
 .inputTask p{
-	text-align: center;
-margin: 0 auto;
-font-size: 25px;
-color: #34495e; 
-padding-top: 30px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 25px;
+    color: #34495e; 
+    padding-top: 30px;
 }
 
 
 /*
    Стиль форм
-   */
+*/
 
-   form{
-   	width:250px;
-   	margin:50px auto;
-   	padding:15px 20px;
-   	background:#f5f5f5;
-   	background-color:rgba(245,245,245,0.95);
-   	border-radius: 10px;
-   	box-shadow:0 0 5px rgba(0, 0, 0, 0.4);
-   }
-   label{
-   	display:block;
-   	margin-top:1em;
-   	margin-bottom:0.5em;
-   }
-   label:first-child{
-   	margin-top:0;
-   }
-   input[type="text"],
-   input[type="password"],
-   input[type="email"],
-   textarea[name="task"]
-   {
-   	width:100%;
-   	border:1px solid #ccc;
-   	padding:4px 5px;
-   	background:white;
-   	border-radius: 5px;
-   	box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.2);
-   	box-sizing:border-box;
-   }
-   input[type="text"]:focus,
-   input[type="password"]:focus,
-   input[type="email"]:focus,
-   textarea[name="task"]:focus{
-   	box-shadow:0 0 5px rgba(50, 200, 255, 0.5);
-   	outline:none;
-   }
+form{
+    width:250px;
+    margin:50px auto;
+    padding:15px 20px;
+    background:#f5f5f5;
+    background-color:rgba(245,245,245,0.95);
+    border-radius: 10px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.4);
+}
+label{
+    display:block;
+    margin-top:1em;
+    margin-bottom:0.5em;
+}
+label:first-child{
+    margin-top:0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"]
+,textarea[name="task"]
+{
+    width:100%;
+    border:1px solid #ccc;
+    padding:4px 5px;
+    background:white;
+    border-radius: 5px;
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing:border-box;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus
+,textarea[name="task"]:focus
+{
+    box-shadow:0 0 5px rgba(50, 200, 255, 0.5);
+    outline:none;
+}
 
-   input[type="submit"]{
-   	display:block;
-   	margin-top:1em;
-   	padding:5px 15px;  
-   	font-weight:bold;
-   	color:#333;
-   	background:white;
-   	border:none;
-   	border-radius: 12px;
-   	background-image: linear-gradient(to bottom, #fff, #ddd);
-   	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-   	text-shadow:0 1px 1px white;
-   }
-   input[type="file"]{
-   	display:block;
-   	margin:15px 0; 
-   }
+input[type="submit"]{
+    display:block;
+    margin-top:1em;
+    padding:5px 15px;  
+    font-weight:bold;
+    color:#333;
+    background:white;
+    border:none;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, #fff, #ddd);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow:0 1px 1px white;
+}
+input[type="file"]{
+    display:block;
+    margin:15px 0; 
+}
+
+
+/*
+Стиль для таблиці
+*/
+
+.table{
+    width: 100%;
+
+}
+.table td {
+    padding-left: 1px;
+    vertical-align: top;
+    color:white;
+    text-shadow: 2px 2px 3px black;
+    font-size: 20px;
+}
+
+.table caption{
+    color: #34495e;
+    text-align: center;
+    font-size: 32px;
+    padding:10px 0px 10px 0px;
+    font-weight:600;
+    text-shadow: 2px 2px 2px grey;
+
+}
+
+.td1{
+    background-color: rgba(177,70,0, 0.8);
+    border-radius: 5px;
+    width: 470px;
+}
+.td2{
+    background-color: rgba(128,120,0, 0.8);
+    border-radius: 5px;
+    width: 470px;
+}
+.td3{
+    background-color: rgba(139,0,70, 0.8);
+    border-radius: 5px;
+    width: 470px;
+}
+.td4{
+    background-color: rgba(70,50,70, 0.8);
+    border-radius: 5px;
+    width: 470px;
+}
+
+.td02{
+    background-color: rgba(139,0,0,0.8);
+    border-radius: 5px;
+}
+.td03{
+    background-color: rgba(0,100,0, 0.8);
+    border-radius: 5px;
+    width: 48px;
+}
+
+.table tr .td04{
+    background-color: rgba(255,140,0,0.8);
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.table tr .td05{
+    background-color: rgba(139,0,139,0.8);
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+.table .tdroteid {
+    font-weight:900;
+    line-height:0.9em;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 10px 0px;
+}
+
+.table .tdname {
+    padding: 10px;
+    font-weight:900;
+    text-align: center;
+    font-size: 20px;
+}
+table ol{
+    list-style: none;
+    padding: 0 5px 0 10px;
+    margin: 5px 0;
+}
+
+li .element{
+    visibility:hidden; /* Скрываем подменю */
+}
+.table li:hover .element { 
+    visibility: visible; /* При выделении пункта курсором мыши отображается подменю */
+
+}
+
+.table .li:hover{
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+.clikc{
+
+    position: absolute;
+    z-index: 2;
+    left: 5px;
+}
+.li{
+    padding: 5px 30px 0px 30px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.move{
+    position: absolute;
+    z-index: 2;
+    right: 5px;
+}
+
+.table li .add {
+    padding: 5px 10px 5px 5px;
+    margin-left: 30px;
+    color:white;
+    text-decoration: none;
+    visibility: visible;
+    background-color: rgb(177,70,0);
+    border-radius: 5px;
+}
+
+.table caption form{
+    margin: 5px auto;
+    text-align: left;
+    font-size: 16px;
+    width: 300px;
+    font-weight:600;
+    text-shadow: 0px 0px 0px grey;
+    
+}
+.table form label{
+ margin: 2px 0;
+}
+
+.radio1{
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.table .good{
+    margin: 0 0;
+}
+
+.li div{
+    word-wrap: break-word; 
+    width: 390px;
+    white-space:pre-wrap;
+}
+.li form{
+    width:auto;
+    margin:0;
+    padding:0 0 2px 10px;
+    background:rgba(245,245,245,0.1);
+    background-color:rgba(245,245,245,0.1);
+    border-radius: 5px;
+    box-shadow:0 0 0px rgba(0, 0, 0, 0.0);
+    
+}
+.li textarea{
+        margin:0;
+    padding:0;
+    text-align: left;
+    width:100%;
+    border:0px;
+    background:rgba(0, 0, 0, 0.0);;
+    border-radius: 5px;
+    box-shadow:inset 0 0px 0px rgba(0, 0, 0, 0.0);
+    color: white;
+    font: 20px Arial;
+    text-shadow: 2px 2px 3px black;
+}
+.li textarea:focus
+{
+    box-shadow:0 0 0px rgba(50, 200, 255, 0.0);
+    outline:none;
+}
+.li input[type="submit"]{
+    display:block;
+    margin: 0 5px 0px 5px;
+    padding:5px 15px;  
+    font-weight:bold;
+    color:#FFFFFF;
+    background:white;
+    border:none;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0);
+    text-shadow:2px 2px 3px black;
+    font-size: 16px;
+}
+.li input[type="submit"]:focus{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.completedTable{
+    background-color: rgba(0, 100, 0, 0.7);
+    border-radius: 5px;
+    margin: 10px auto;
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 591px;
+}
+.completedTable caption{
+    color: #34495e;
+    text-align: center;
+    font-size: 32px;
+    padding:10px 0px 10px 0px;
+    font-weight:600;
+    text-shadow: 2px 2px 2px grey;
+
+}
+
+.completedTable td {
+    padding-left: 1px;
+    vertical-align: top;
+    color:white;
+    text-shadow: 2px 2px 3px black;
+    font-size: 20px;
+}
+.completedTable .li div{
+    width: 500px;
+}
+
+li .element{
+    visibility:hidden; /* Скрываем подменю */
+}
+.completedTable li:hover .element { 
+    visibility: visible; /* При выделении пункта курсором мыши отображается подменю */
+
+}
+
+.completedTable .li:hover{
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+.completedTable .li{
+    margin:0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.restore{
+    position: absolute;
+    z-index: 2;
+    left: 5px;
+}
