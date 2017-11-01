@@ -49,13 +49,13 @@ require_once 'models/mod_listTask.php';
                         <input type="submit" value="Створити" name="submit"/>
                 <?php } ?>
                 </form>
-            <?php if ($good) { ?><div class="newTask"><p><a href="/?action=creat" onclick="this.href += '&scrl=' + document.body.scrollTop" title="Додати запис"><img src="views/images/add.png" width="20" height="20" alt="add">
+            <?php if ($good) { ?><div class="newTask"><p><a href="/?action=creat" onclick="this.href += '&scrl=' + window.pageYOffset" title="Додати запис"><img src="views/images/add.png" width="20" height="20" alt="add">
                             Cтворити нове завдання</a>
                     </p></div>
                         <?php }?>
 
                 <?php } else { ?>
-                <div class="newTask"><p><a href="/?action=creat" onclick="this.href += '&scrl=' + document.body.scrollTop" title="Додати запис"><img src="views/images/add.png" width="20" height="20" alt="add">
+                <div class="newTask"><p><a href="/?action=creat" onclick="this.href += '&scrl=' + window.pageYOffset" title="Додати запис"><img src="views/images/add.png" width="20" height="20" alt="add">
                             Cтворити нове завдання</a>
                     </p></div>
                 <?php } ?>
@@ -81,17 +81,17 @@ require_once 'models/mod_listTask.php';
                                     <input type="submit" value="Зберегти" name="submit"/> 
                                 </form>
                             <?php } else {?>
-                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
+                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
                         <?php if ($taskImpUrg[$key-1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpUrg[$key-1]['id']?>&replaceIdSort=<?=$taskImpUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpUrg[$key-1]['id']?>&replaceIdSort=<?=$taskImpUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
                             <?php } ?>
                         <div><?=$key+1?>.) <?=$task['task']?></div>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=3&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в не важливі"><img src="views/images/down.png" width="20" height="20" alt="Перемістити в не важливі"></a>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=2&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в не термінові"><img src="views/images/right.png" width="20" height="20" alt="Перемістити в не термінові"></a>
-                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
-                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=3&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в не важливі"><img src="views/images/down.png" width="20" height="20" alt="Перемістити в не важливі"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=2&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в не термінові"><img src="views/images/right.png" width="20" height="20" alt="Перемістити в не термінові"></a>
+                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
+                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
                         <?php if ($taskImpUrg[$key+1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpUrg[$key+1]['id']?>&replaceIdSort=<?=$taskImpUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpUrg[$key+1]['id']?>&replaceIdSort=<?=$taskImpUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
                            <?php } ?> 
                          <?php } ?>
                     </li>
@@ -112,17 +112,17 @@ require_once 'models/mod_listTask.php';
                                     <input type="submit" value="Зберегти" name="submit"/> 
                                 </form>
                             <?php } else {?>
-                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
+                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
                         <?php if ($taskImpNUrg[$key-1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpNUrg[$key-1]['id']?>&replaceIdSort=<?=$taskImpNUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpNUrg[$key-1]['id']?>&replaceIdSort=<?=$taskImpNUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
                             <?php } ?>
                         <div><?=$key+1?>.) <?= $task['task']?></div>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=1&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в термінові"><img src="views/images/left.png" width="20" height="20" alt="Перемістити в термінові"></a>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=4&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в не важливі"><img src="views/images/down.png" width="20" height="20" alt="Перемістити в не важливі"></a>
-                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
-                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=1&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в термінові"><img src="views/images/left.png" width="20" height="20" alt="Перемістити в термінові"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=4&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в не важливі"><img src="views/images/down.png" width="20" height="20" alt="Перемістити в не важливі"></a>
+                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
+                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
                         <?php if ($taskImpNUrg[$key+1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpNUrg[$key+1]['id']?>&replaceIdSort=<?=$taskImpNUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskImpNUrg[$key+1]['id']?>&replaceIdSort=<?=$taskImpNUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
                            <?php } ?> 
                          <?php } ?>
                     </li>
@@ -145,17 +145,17 @@ require_once 'models/mod_listTask.php';
                                     <input type="submit" value="Зберегти" name="submit"/> 
                                 </form>
                             <?php } else {?>
-                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
+                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
                         <?php if ($taskNImpUrg[$key-1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpUrg[$key-1]['id']?>&replaceIdSort=<?=$taskNImpUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpUrg[$key-1]['id']?>&replaceIdSort=<?=$taskNImpUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
                             <?php } ?>
                         <div><?=$key+1?>.) <?= $task['task']?></div>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=1&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в важливі"><img src="views/images/up.png" width="20" height="20" alt="Перемістити в важливі"></a>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=4&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в не термінові"><img src="views/images/right.png" width="20" height="20" alt="Перемістити в не термінові"></a>
-                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
-                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=1&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в важливі"><img src="views/images/up.png" width="20" height="20" alt="Перемістити в важливі"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=4&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в не термінові"><img src="views/images/right.png" width="20" height="20" alt="Перемістити в не термінові"></a>
+                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
+                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
                         <?php if ($taskNImpUrg[$key+1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpUrg[$key+1]['id']?>&replaceIdSort=<?=$taskNImpUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpUrg[$key+1]['id']?>&replaceIdSort=<?=$taskNImpUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
                            <?php } ?> 
                          <?php } ?>
                     </li>
@@ -175,17 +175,17 @@ require_once 'models/mod_listTask.php';
                                     <input type="submit" value="Зберегти" name="submit"/> 
                                 </form>
                             <?php } else {?>
-                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
+                        <a class="clikc element" href='?action=statusOk&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Відмітити як виконане"><img src="views/images/check.png" width="20" height="20" alt="v"></a> 
                         <?php if ($taskNImpNUrg[$key-1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpNUrg[$key-1]['id']?>&replaceIdSort=<?=$taskNImpNUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpNUrg[$key-1]['id']?>&replaceIdSort=<?=$taskNImpNUrg[$key-1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вгору"><img src="views/images/up.png" width="20" height="20" alt="вверх"></a>
                             <?php } ?>
                         <div><?=$key+1?>.) <?= $task['task']?></div>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=3&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в термінові"><img src="views/images/left.png" width="20" height="20" alt="Перемістити в термінові"></a>
-                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=2&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити в важливі"><img src="views/images/up.png" width="20" height="20" alt="Перемістити в важливі"></a>
-                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
-                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=3&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в термінові"><img src="views/images/left.png" width="20" height="20" alt="Перемістити в термінові"></a>
+                        <a class="element" href='?action=moving&id=<?=$task['id']?>&goto=2&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити в важливі"><img src="views/images/up.png" width="20" height="20" alt="Перемістити в важливі"></a>
+                        <a class="element" href='?action=edit&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Редагувати"><img src="views/images/edit.png" width="20" height="20" alt="Редагуввщцт.pngати"></a>
+                        <a class="element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a>
                         <?php if ($taskNImpNUrg[$key+1]['id']){ ?>
-                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpNUrg[$key+1]['id']?>&replaceIdSort=<?=$taskNImpNUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
+                        <a class="move element" href='?action=ordinal&id=<?=$task['id']?>&idSort=<?=$task['sorting']?>&replaceId=<?=$taskNImpNUrg[$key+1]['id']?>&replaceIdSort=<?=$taskNImpNUrg[$key+1]['sorting']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Перемістити вниз"><img src="views/images/down.png" width="20" height="20" alt="вниз"></a>
                            <?php } ?> 
                          <?php } ?>
                     </li>
@@ -202,8 +202,8 @@ require_once 'models/mod_listTask.php';
                 <ol>
                     <?php foreach ($taskOk as $task) { ?>
                     <li class="li">
-                        <a class="restore element" href='?action=restore&id=<?=$task['id']?>&category=<?=$task['category']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Відновити"><img src="views/images/back.png" width="20" height="20" alt="Відновити"></a>
-                        <div>- <?=$task['task']?> <a class="delete element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + document.body.scrollTop" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a></div>
+                        <a class="restore element" href='?action=restore&id=<?=$task['id']?>&category=<?=$task['category']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Відновити"><img src="views/images/back.png" width="20" height="20" alt="Відновити"></a>
+                        <div>- <?=$task['task']?> <a class="delete element" href='?action=delete&id=<?=$task['id']?>&' onclick="this.href += 'scrl=' + window.pageYOffset" title="Видалити"><img src="views/images/delete.png" width="20" height="20" alt="Видалити"></a></div>
                         
                     </li>
                     <?php } ?>
