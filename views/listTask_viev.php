@@ -7,8 +7,9 @@ require_once 'models/mod_listTask.php';
     function skrl() {
         window.scroll(0, <?php echo $_GET['scrl']; ?>);
     }
-    document.addEventListener("DOMContentLoaded", skrl);
-
+   <?php if(!empty($_GET['scrl'])): ?>
+   document.addEventListener("DOMContentLoaded", skrl);
+   <?php endif; ?>
 </script>
 <script type="text/javascript">
     jQuery(function()
